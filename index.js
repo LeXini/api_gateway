@@ -20,8 +20,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
-const organizacaoServiceProxy = httpProxy('http://localhost:3002');
-const equipeServiceProxy = httpProxy('http://localhost:3003');
+const organizacaoServiceProxy = httpProxy('https://organizacoes-api.herokuapp.com/');
+const equipeServiceProxy = httpProxy('https://equipes-api.herokuapp.com/');
 
 const sistema = (request, response, next) => {
     response.status(200).json("Seja bem-vindo ao sistema")
